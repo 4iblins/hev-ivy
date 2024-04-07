@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEPAGE</title>
+    <link rel="shortcut icon" href="./logo.jpg" title="" type="image/jpg" />
+    <style>
+        body {
+            background-color: rgb(8, 95, 55);
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 100px 500px;
+        }
+
+        main {
+            border-radius: 10px; 
+            padding: 20px 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            max-width: 1200px; 
+        }
+
+        .first-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: 80px;
+            width: 1160px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        .first-div ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .first-div img.logo {
+            margin: 40px 40px;
+            height: 100px;
+            width: auto;
+            margin-left: 100px;
+        }
+
+        .sec-div {
+            position: relative;
+            background-color: #f0f0f0;
+            padding: 100px;
+            height: 400px;
+            width: 1000px;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .red {
+            position: absolute;
+            height: 500px;
+            width: 550px;
+            left: 38rem;
+            bottom: 60px;
+        }
+
+        .first-img {
+            position: absolute;
+            height: 550px;
+            width: 370px;
+            left: 630px;
+            top: -80px;
+        }
+
+        .sec-img {
+            position: absolute;
+            height: 330px;
+            width: 200px;
+            bottom: 40px;
+            left: 870px;
+        }
+
+        .text {
+            position: absolute;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            top: 250px;
+            left: 140px;
+            font-size: 20px;
+        }
+
+        .text2 {
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            top: 250px;
+            left: 140px;
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #943a3a;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 23px;
+            margin-top: 40px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .button:hover {
+            background-color: #751b1b;
+        }
+        
+        .dropdown {
+          position: relative;
+        }
+
+      .dropdown-content {
+          position: absolute;
+          min-width: 90px;
+          border-radius: 15px;
+          z-index: 1;
+          padding: 0;
+          margin-top: 10px;
+          top: calc(100% + 10px); 
+          left: 0; 
+          transition: opacity 0.3s ease, visibility 0.3s ease; 
+      }
+
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            border-radius: 15px; 
+            background-color: #751b1b;
+        }
+
+        .dropdown-content a + a {
+            margin-top: 10px; 
+        }
+
+        .dropdown-content a:hover {
+            background-color: #751b1b;
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1; 
+            visibility: visible; 
+        }
+
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="first-div">
+        <img src="./logo.jpg" alt="img3" class="logo">
+        <ul>
+            <li><button class="button"><a href="./home.html">Home</a></button></li>
+            <li><button class="button"><a href="./about.html">About</a></button></li>
+            <li class="dropdown">
+                <button class="button dropbtn">Lifestyle</button>
+                <div class="dropdown-content">
+                    <a href="./lifestyle1.html">Fashion</a>
+                    <a href="./Lifestyle1.html">Personal</a>
+                </div>
+            </li>
+            <li><button class="button"><a href="./contact.html">Contact</a></button></li>
+        </ul>
+    </div>
+
+    <div class="sec-div">
+        <img src="./1.png" alt="img1" class="red">
+        <img src="./2.png" alt="img2" class="first-img">
+        <img src="./3.png" alt="img3" class="sec-img">
+
+        <div class="text">
+            <h1>EXPLORE WITH IV</h1>
+            <p>live, laugh, love</p>
+
+            <div class="text2">
+                <p>"Never let fear stop you</p>
+                <p>from trying new things." /wink wink</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    const dropdownButton = document.querySelector('.dropbtn');
+    document.addEventListener("DOMContentLoaded", function() {
+    const dropdownButton = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownContent.style.opacity = '0';
+    dropdownContent.style.visibility = 'hidden';
+
+    dropdownButton.addEventListener('click', () => {
+        if (dropdownContent.style.visibility === 'hidden') {
+            dropdownContent.style.opacity = '1';
+            dropdownContent.style.visibility = 'visible';
+        } else {
+            dropdownContent.style.opacity = '0';
+            dropdownContent.style.visibility = 'hidden';
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
